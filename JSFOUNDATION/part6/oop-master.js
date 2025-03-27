@@ -55,3 +55,44 @@ let myCar = new Car("Toyota","corolla")
 
 // Encapsulation
 
+class BankAccount {
+    #balance = 0;
+
+    deposit(amount){
+        this.#balance;
+    }
+
+    getBalance(){
+        return `$ ${this.#balance}`;
+    }
+}
+
+let account = new BankAccount()
+// console.log(account.getBalance());
+
+// Abstraction
+
+class CoffeMachine {
+    start(){
+        // call DB
+        // filter value
+        return `Starting the machine...`;
+    }
+    brewCoffee(){
+      // complex calculation
+      return `Brewing Coffee`; 
+    }
+    pressButton(){
+        let msgone = this.start();
+        let msgtwo = this.brewCoffee();
+        return `${msgone} + ${msgtwo}`
+    }
+}
+let myMachine = new CoffeMachine();
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
+// console.log(myMachine.pressButton());
+
+
+//polymorphism
+
