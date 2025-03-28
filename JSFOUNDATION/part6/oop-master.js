@@ -96,3 +96,59 @@ let myMachine = new CoffeMachine();
 
 //polymorphism
 
+class Bird{
+    fly(){
+        return `Flying....`
+    }
+}
+
+class Penguin extends Bird{
+    fly(){
+        return `Penguins can't fly`;
+    }
+}
+
+let bird = new Bird()
+let penguin = new Penguin()
+// console.log(bird.fly());
+// console.log(penguin.fly());
+
+// static method
+
+class Calculator{
+    static add(a,b){
+        return a+b
+    }
+}
+
+//let miniCalc = new Calculator();
+// console.log(miniCalc.add(36,64)); 
+
+// console.log(Calculator.add(36,64)); 
+
+//getters and setters
+
+class Employee {
+#salary;
+    constructor(name, salary){
+                if (salary<0) {
+                    throw new Error("Salary cannot be in negative");
+                }
+        this.name = name;
+        this._salary = salary;
+    }
+    get salary(){
+        return `You are not allowed to see salary`;
+    }
+
+    set salary(value){
+        if (value<0){
+            console.error("Invalid Salary");
+        }else{
+this._salary = value;
+        }
+    }
+}
+
+let emp = new Employee("Alice", -50000);
+// console.log(emp._salary);
