@@ -32,4 +32,22 @@
 // }
 // console.log(addNumbers(22,33,37,8));
 
+// function myFun2(arr){
+//     arr.pop()
+// }
+// let arr = [1,2,3,4,5,6]
+// console.log(arr);
+// myFun2(arr)
+// console.log(arr);
 
+// function myFun3(o){
+//     o.email = "example@example.com"
+// }
+// let user = {
+//     name: "john",
+//     age: 30,
+//     email: "john@example.com"
+// }
+// console.log(user);
+// myFun3(user)
+// console.log("After calling Function: ",user)
