@@ -21,7 +21,7 @@
 
 // function multiplier(factor){
 //     return (num)=>{
-//         console.log(num*factor);
+//      console.log(num*factor);
 //         return num*factor 
 //     }
 // }
