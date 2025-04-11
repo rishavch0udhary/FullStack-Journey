@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Circles</title>
+    <style>
+        /* Dark theme background color */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;  /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ecf0f1; /* Light text color for contrast */
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ecf0f1;  /* Light color for the heading */
+        }
+
+        /* Style for the unordered list */
+        #colors {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Circle styles */
+        .color-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s ease; /* Smooth hover effect */
+        }
+
+        #red {
+            background-color: #e74c3c;  /* Dark Red */
+        }
+
+        #blue {
+            background-color: #3498db;  /* Dark Blue */
+        }
+
+        #green {
+            background-color: #2ecc71;  /* Dark Green */
+        }
+        #grey {
+            background-color: #3b3b3b;  /* Dark Green */
+        }
+
+        #yellow {
+            background-color: #f39c12;  /* Dark Yellow */
+        }
+
+        #purple {
+            background-color: #9b59b6;  /* Dark Purple */
+        }
+
+        /* Hover effect with border */
+        .color-circle:hover {
+            border: 3px solid #ecf0f1;  /* Light border on hover */
+            transform: scale(1.1);  /* Slight zoom effect */
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Color Circles</h1>
+        <ul id="colors">
+            <li id="red" class="color-circle"></li>
+            <li id="blue" class="color-circle"></li>
+            <li id="green" class="color-circle"></li>
+            <li id="yellow" class="color-circle"></li>
+            <li id="purple" class="color-circle"></li>
+            <li id="grey" class="color-circle"></li>
+        </ul>
+    </div>
+    <script src="project.js"></script>
+</body>
+</html>
