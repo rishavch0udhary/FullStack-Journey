@@ -19,8 +19,4 @@ function mangoClick(){
          // console.log(this.innerText)
          ev.stopPropagation()
      },)
- })
-
-
-
- ye sirf falltu line hai
+ }
