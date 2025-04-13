@@ -20,3 +20,7 @@ function mangoClick(){
          ev.stopPropagation()
      },)
  })
+
+
+
+ ye sirf falltu line hai
