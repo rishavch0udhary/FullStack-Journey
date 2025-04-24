@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+     <div class="main_div">
+        <div class="music_container">
+            <h2 id="title">Qaafirana</h2>
+            <h3 id="artist">Arijit singh</h3>
+            <div class="img_container">
+               <img src="images/rishav1.jpeg" alt="">
+            </div>
+            <audio src="music/rishav1.mp3"></audio>
+
+            <!-- controls -->
+             <div class="music_controls">
+                <i class="fa-solid fa-backward" id="prev" title="previous"></i>
+                <i class="fa-solid fa-play main_button" id="play" title="play"></i>
+                <i class="fa-solid fa-forward" id="Next" title="Next"></i>
+             </div>
+        </div>
+     </div>
+  <script>
+    const music = document.querySelector("audio");
+    const img = document.querySelector("img");
+    const play = document.getElementById("play");
+    const artist = document.getElementById("artist");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const Next = document.getElementById("Next");
+
+    const songs = [
+    {
+            name:rishav1,
+            title:Qaafirana,
+            artist:ArijitSingh,
+        },
+        {
+            name:rishav2,
+            title: KarHarMaidaanFateh,
+            artist:SukhwinderSingh&ShreyaGhoshal
+        },
+        {
+            name:rishav3,
+            title:Kabira,
+            artist:TOCHIRAINA,REKHABHARDWAJ,
+        }
+    ]
+
+    let isPlaying = false;
+    const playMusic = ()=>{
+        isPlaying = true;
+        music.play();
+        play.classList.replace("fa-play", "fa-pause");
+        img.classList.add("anime");
+    };
+    const pauseMusic = ()=>{
+        isPlaying = false;
+        music.pause();
+        play.classList.replace("fa-pause", "fa-play");
+        img.classList.remove("anime");
+    };
+
+    play.addEventListener("click",()=>{
+        // if(isPlaying){
+        //     pauseMusic();
+        // }else{
+        //     playMusic();
+        // }
+        isPlaying ? pauseMusic() : playMusic(); 
+    })
+  </script>
+</body>
+</html>
