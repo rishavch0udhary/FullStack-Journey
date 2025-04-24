@@ -14,15 +14,15 @@
             <h2 id="title">Qaafirana</h2>
             <h3 id="artist">Arijit singh</h3>
             <div class="img_container">
-               <img src="images/rishav1.jpeg" alt="">
+               <img src="images/rishav1.jpg" alt="">
             </div>
             <audio src="music/rishav1.mp3"></audio>
 
             <!-- controls -->
              <div class="music_controls">
-                <i class="fa-solid fa-backward" id="prev" title="previous"></i>
-                <i class="fa-solid fa-play main_button" id="play" title="play"></i>
-                <i class="fa-solid fa-forward" id="Next" title="Next"></i>
+                <i style="cursor: pointer;" class="fa-solid fa-backward" id="prev" title="previous"></i>
+                <i style="cursor: pointer;" class="fa-solid fa-play main_button" id="play" title="play"></i>
+                <i style="cursor: pointer;" class="fa-solid fa-forward" id="Next" title="Next" onclick="nextSong()"></i>
              </div>
         </div>
      </div>
@@ -37,19 +37,39 @@
 
     const songs = [
     {
-            name:rishav1,
-            title:Qaafirana,
-            artist:ArijitSingh,
+            name:"rishav1",
+            title:"Qaafirana",
+            artist:"ArijitSingh",
         },
         {
-            name:rishav2,
-            title: KarHarMaidaanFateh,
-            artist:SukhwinderSingh&ShreyaGhoshal
+            name:"rishav2",
+            title: "Maidaan Fateh",
+            artist:"Sukhwinder & Shreya"
         },
         {
-            name:rishav3,
-            title:Kabira,
-            artist:TOCHIRAINA,REKHABHARDWAJ,
+            name:"rishav3",
+            title:"Kabira",
+            artist:"TOCHIRAINA",
+        },
+        {
+            name:"rishav4",
+            title:"Baarish",
+            artist:"Asees Kaur",
+        },
+        {
+            name:"rishav5",
+            title:"Chahunga",
+            artist:"Arijit Singh",
+        },
+        {
+            name:"rishav6",
+            title:"Humdard",
+            artist:"Arijit Singh",
+        },
+        {
+            name:"rishav7",
+            title:"Jeene laga hoon",
+            artist:"Atif Aslam",
         }
     ]
 
@@ -75,6 +95,30 @@
         // }
         isPlaying ? pauseMusic() : playMusic(); 
     })
+
+       const loadSong =(songs)=>{
+           title.textContent = songs.title;
+           artist.textContent = songs.artist;
+           music.src = "music/" + songs.name + ".mp3";
+           img.src = "images/" + songs.name + ".jpg";
+ 
+       };
+
+       songIndex = 2;
+    //    loadSong(songs[2]);
+
+       const nextSong = ()=>{
+        songIndex = (songIndex + 1) % songs.length;
+        loadSong(songs[songIndex]);
+        playMusic();
+       }
+       const prevSong = ()=>{
+        songIndex = (songIndex - 1 + songs.length)%songs.length;
+        loadSong(songs[songIndex]);
+        playMusic();
+       }
+       Next.addEventListener('click',nextSong);
+       prev.addEventListener('click',prevSong);
   </script>
 </body>
 </html>
