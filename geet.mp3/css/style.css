@@ -63,7 +63,7 @@ img{
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 1rem;
     font-size: 2rem;
 }
 .music_controls .fa{
@@ -93,7 +93,7 @@ img{
 }
 
 .anime{
-    animation: rotatePlayer 5s linear infinite;
+    animation: rotatePlayer 7s linear infinite;
 }
 @keyframes rotatePlayer{
     from{
@@ -102,4 +102,52 @@ img{
     to{
            transform: rotate(360deg);
     }
+}
+
+/* progrss style */
+.progrssbar_container{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+.progress_div{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.3), 0 32px 64px rgba(0, 0, 0, 0.3);
+     
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    transition: width is linear;
+    -moz-transition: width is linear;
+    -o-transition: width is linear;
+    -webkit-transition: width is linear;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.progress{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    border-radius: 4rem;
+    position: relative;
+    /* margin-top: 0.5rem; */
+    /* transition: all is linear;
+    -moz-transition: all is linear;
+    -o-transition: all is linear;
+    -webkit-transition: all is linear; */
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.progress_duration_meter{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    font-size: 1.2rem
 }
