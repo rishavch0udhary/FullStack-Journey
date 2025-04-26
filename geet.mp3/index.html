@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+     <div class="main_div">
+        <!-- <img src="https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg" alt=""> -->
+        <div class="music_container">
+            <h2 id="title">Qaafirana</h2>
+            <h3 id="artist">Arijit singh</h3>
+            <div class="img_container">
+               <img src="/assets/images/rishav1.jpg" alt="">
+            </div>
+            <audio src="/assets/music/rishav1.mp3"></audio>
+
+           <!-- Progress bar -->
+               <div class="progrssbar_container" id="progress_container">
+                <div class="progress_duration_meter">
+                    <div id="current_time">0:00</div>
+                    <div id="duration">5:41</div>
+                </div>
+                <div class="progress_div" id="progress_div">
+                    <div class="progress" id="progress"></div>
+                </div>
+               </div>
+
+            <!-- controls -->
+             <div class="music_controls">
+                <i style="cursor: pointer;" class="fa-solid fa-backward" id="prev" title="previous"></i>
+                <i style="cursor: pointer;" class="fa-solid fa-play main_button" id="play" title="play"></i>
+                <i style="cursor: pointer;" class="fa-solid fa-forward" id="Next" title="Next" onclick="nextSong()"></i>
+             </div>
+        </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>
